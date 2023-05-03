@@ -1,0 +1,92 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+
+html::before {
+    content: "";
+    background: url(/num_bkg.jpg) no-repeat center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 1px 4px 10px red;
+    margin-top: 5rem;
+    color: rgb(2, 7, 92);
+    font-size: 3.3em;
+    font-weight: 800;
+
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.btn {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    margin: 3rem 1rem;
+    padding: 1rem 1rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(121, 247, 253);
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+    box-shadow: 4px 5px 8px rgb(51, 200, 254);
+}
+
+
+
+.btn:hover {
+    background-color: rgb(255, 68, 68);
+    opacity: 1;
+
+}
+
+p {
+    color: rgb(2, 4, 16);
+    text-shadow: 1px 1px 2px rgb(111, 79, 79), 0 0 20px rgb(79, 79, 131), 0 0 5px rgb(127, 127, 195);
+    font-weight: 600;
+    font-size: larger;
+    transition: 0.5s;
+    margin: 0.3rem 0;
+}
+
+#finalmsg {
+    margin-bottom: 1.5rem;
+}
+
+#frm1{
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    text-shadow: 1px 4px 10px rgb(0, 85, 255);
+    
+}
+
+.txt{
+    margin: 5px 0;
+    font-weight: 800;
+}
+
+#number{
+    border-radius: 8px;
+    padding: 5px 6px;
+    text-align: center;
+}

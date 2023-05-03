@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>GUESS THE NUMBER - GAME</h1>
+    <hr>
+    <div class="elem">
+        <form action="" id="frm1">
+            <div class="txt">Enter The Number:</div> <input type="number" name="number" id="number"><br>
+        </form>
+        <button onclick="game()" class="btn">PLAY GAME!!!</button><br>
+        <p id="msg1" class="guesses"></p>
+        <p id="msg2" class="guesses"></p>
+        <p id="msg3" class="guesses"></p>
+        <p id="msg4" class="guesses"></p>
+        <p id="msg5" class="guesses"></p>
+        <p id="finalmsg"></p>
+    </div>
+    <hr>
+    <script>
+        number=document.getElementById('number')
+        
+
+        function game() {
+            var num=number.value;
+            // var num = prompt("Enter a number between 1 - 100")
+            var guess1 = Math.floor((Math.random()) * 100) + 1
+            var guess2 = Math.floor((Math.random()) * 100) + 1
+            var guess3 = Math.floor((Math.random()) * 100) + 1
+            var guess4 = Math.floor((Math.random()) * 100) + 1
+            var guess5 = Math.floor((Math.random()) * 100) + 1
+            // num = guess3
+            var flag = 0
+            if ((num <= 100) && (num >= 1)) {
+
+                if (flag == 0) {
+
+                    document.getElementById("msg1").innerHTML = ("Computer guessed = " + guess1)
+                    if ((guess1 == num) && (flag == 0)) {
+                        document.getElementById("finalmsg").innerHTML = ("Computer guessed your number = " + num)
+                        flag = 1
+                    }
+                }
+
+                if (flag == 0) {
+
+                    document.getElementById("msg2").innerHTML = ("Computer guessed = " + guess2)
+                    if ((guess2 == num) && (flag == 0)) {
+                        document.getElementById("finalmsg").innerHTML = ("Computer guessed your number = " + num)
+                        flag = 1
+                    }
+                }
+
+                if (flag == 0) {
+
+                    document.getElementById("msg3").innerHTML = ("Computer guessed = " + guess3)
+                    if ((guess3 == num) && (flag == 0)) {
+                        document.getElementById("finalmsg").innerHTML = ("Computer guessed your number = " + num)
+                        flag = 1
+                    }
+                }
+
+                if (flag == 0) {
+
+                    document.getElementById("msg4").innerHTML = ("Computer guessed = " + guess4)
+                    if ((guess4 == num) && (flag == 0)) {
+                        document.getElementById("finalmsg").innerHTML = ("Computer guessed your number = " + num)
+                        flag = 1
+                    }
+                }
+
+                if (flag == 0) {
+
+                    document.getElementById("msg5").innerHTML = ("Computer guessed = " + guess5)
+                    if ((guess5 == num) && (flag == 0)) {
+                        document.getElementById("finalmsg").innerHTML = ("Computer guessed your number = " + num)
+                        flag = 1
+                    }
+                }
+
+                if (flag == 0) {
+                    document.getElementById("finalmsg").innerHTML = ("You Win! Computer coudn't guess your number. :)")
+                }
+
+            }
+            else {
+                alert("Wrong input, Please Play Again :( ")
+            }
+
+            console.log("runned successfully")
+
+        }
+    </script>
+</body>
+
+</html>
